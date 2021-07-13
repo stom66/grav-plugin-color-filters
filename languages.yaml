@@ -1,4 +1,4 @@
 en:
   PLUGIN_COLOR_FILTERS:
-    TEXT_VARIABLE: Text Variable
-    TEXT_VARIABLE_HELP: Text to add to the top of a page
+    TEXT_DEFAULT_COLOR: Default color
+    TEXT_DEFAULT_COLOR_HELP: The default color to fall back to if invalid parameters are passed

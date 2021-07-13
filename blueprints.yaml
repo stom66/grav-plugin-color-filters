@@ -8,7 +8,6 @@ author:
   name: stom
   email: stom@stom66.co.uk
 homepage: https://github.com/stom66/grav-plugin-color-filters
-demo: http://demo.yoursite.com
 keywords: grav, plugin, etc
 bugs: https://github.com/stom66/grav-plugin-color-filters/issues
 docs: https://github.com/stom66/grav-plugin-color-filters/blob/develop/README.md
@@ -30,7 +29,8 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    text_var:
-      type: text
-      label: PLUGIN_COLOR_FILTERS.TEXT_VARIABLE
-      help: PLUGIN_COLOR_FILTERS.TEXT_VARIABLE_HELP
+    default_color:
+      type: colorpicker
+      default: '#ff0000'
+      label: PLUGIN_COLOR_FILTERS.TEXT_DEFAULT_COLOR
+      help: PLUGIN_COLOR_FILTERS.TEXT_DEFAULT_COLOR_HELP
