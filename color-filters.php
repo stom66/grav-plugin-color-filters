@@ -52,6 +52,9 @@ class ColorFiltersPlugin extends Plugin
         $this->grav['twig']->twig()->addFilter(
             new \Twig_SimpleFilter('hex2rgb', [$this, 'hex2rgb'])
         );
+        $this->grav['twig']->twig()->addFilter(
+            new \Twig_SimpleFilter('rgb2hex', [$this, 'rgb2hex'])
+        );
     }
 
     /**
@@ -80,5 +83,22 @@ class ColorFiltersPlugin extends Plugin
  
         //Return rgb(a) color string
         return $output;
+    }
+
+    public function rgb2hex($color) {
+        //remove the prefix, brackets, and spaces
+        $color = str_replace('rgb(', '', $color);
+        $color = str_replace('rgba(', '', $color);
+        $color = str_replace(')', '', $color);
+        $color = str_replace(' ', '', $color);
+
+        // split the values
+        $rgb = explode(",", $color);
+
+        // convert them to hex and preface with #
+        $hex = sprintf("#%02x%02x%02x", $rgb[0], $rgb[1], $rgb[2]);
+
+        //return the result
+        return $hex
     }
 }
