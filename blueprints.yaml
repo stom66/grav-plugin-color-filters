@@ -3,7 +3,7 @@ slug: color-filters
 type: plugin
 version: 0.1.0
 description: Provides additional Twig Color filters, for converting between various color formats
-icon: palette
+icon: paint-brush
 author:
   name: stom
   email: stom@stom66.co.uk
