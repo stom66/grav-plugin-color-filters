@@ -89,7 +89,7 @@ class ColorFiltersPlugin extends Plugin
     }
     public function hex2rgb($color)
     {
-        $rgb = "rgb(".hex2rgbRaw($color).")";
+        $rgb = "rgb(".$this->hex2rgbRaw($color).")";
         return $rgb;
     }
 
