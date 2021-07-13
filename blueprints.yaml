@@ -1,0 +1,36 @@
+name: Color Filters
+slug: color-filters
+type: plugin
+version: 0.1.0
+description: Provides additional Twig Color filters, for converting between various color formats
+icon: plug
+author:
+  name: stom
+  email: stom@stom66.co.uk
+homepage: https://github.com/stom66/grav-plugin-color-filters
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/stom66/grav-plugin-color-filters/issues
+docs: https://github.com/stom66/grav-plugin-color-filters/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_COLOR_FILTERS.TEXT_VARIABLE
+      help: PLUGIN_COLOR_FILTERS.TEXT_VARIABLE_HELP
