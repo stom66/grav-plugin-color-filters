@@ -55,12 +55,15 @@ class ColorFiltersPlugin extends Plugin
         $this->grav['twig']->twig()->addFilter(
             new \Twig_SimpleFilter('rgb2hex', [$this, 'rgb2hex'])
         );
+        $this->grav['twig']->twig()->addFilter(
+            new \Twig_SimpleFilter('hex2rgbRaw', [$this, 'hex2rgbRaw'])
+        );
     }
 
     /**
      * Converts a hexadecimal string to a comma-separated RGB string
      */
-    public function hex2rgb($color)
+    public function hex2rgbRaw($color)
     {
         // Remove the leading # if present
         if ($color[0] == '#' ) {
@@ -83,6 +86,11 @@ class ColorFiltersPlugin extends Plugin
  
         //Return rgb(a) color string
         return $output;
+    }
+    public function hex2rgb($color)
+    {
+        $rgb = "rgb(".hex2rgbRaw($color).")";
+        return $rgb;
     }
 
     public function rgb2hex($color) {
