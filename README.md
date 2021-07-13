@@ -1,8 +1,6 @@
 # Color Filters Plugin
 
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of the plugin.**
-
-The **Color Filters** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). Provides additional Twig Color filters, for converting between various color formats
+The **Color Filters** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). It provides additional Twig Color filters, for converting between various color formats
 
 ## Installation
 
@@ -42,15 +40,16 @@ enabled: true
 
 Note that if you use the Admin Plugin, a file with your configuration named color-filters.yaml will be saved in the `user/config/plugins/`-folder once the configuration is saved in the Admin.
 
-## Usage
+## Usage Examples
 
-**Describe how to use the plugin.**
+Use this as you would any other Twig filter, eg:
 
-## Credits
+`color = page.header.color|hex2rgb`
+`color = page.header.color|default('#D97210')|hex2rgb|split(",")`
 
-**Did you incorporate third-party code? Want to thank somebody?**
 
 ## To Do
 
-- [ ] Future plans, if any
+- [ ] Add support for hex-to-rgb
+- [ ] Add lighten/darken filters
 
