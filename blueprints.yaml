@@ -3,14 +3,14 @@ slug: color-filters
 type: plugin
 version: 0.1.0
 description: Provides additional Twig Color filters, for converting between various color formats
-icon: plug
+icon: palette
 author:
   name: stom
   email: stom@stom66.co.uk
 homepage: https://github.com/stom66/grav-plugin-color-filters
-keywords: grav, plugin, etc
+keywords: grav, plugin, colors, hex2rgb, rgb2hex
 bugs: https://github.com/stom66/grav-plugin-color-filters/issues
-docs: https://github.com/stom66/grav-plugin-color-filters/blob/develop/README.md
+docs: https://github.com/stom66/grav-plugin-color-filters/blob/main/README.md
 license: MIT
 
 dependencies:
