@@ -99,6 +99,6 @@ class ColorFiltersPlugin extends Plugin
         $hex = sprintf("#%02x%02x%02x", $rgb[0], $rgb[1], $rgb[2]);
 
         //return the result
-        return $hex
+        return $hex;
     }
 }
