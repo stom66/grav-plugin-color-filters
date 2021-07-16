@@ -1,6 +1,12 @@
 # Color Filters Plugin
 
-The **Color Filters** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). It provides additional Twig Color filters, for converting between various color formats
+The **Color Filters** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). It provides additional Twig Color filters, for converting between various color formats.
+
+Supports the following conversions:
+
+* rgb2hex - outputs a standard hex code with # prefix, eg `#ff0000`
+* hex2rgb - outputs rgb values mapped between 0-255, wrapped in 'rgb()', eg `rgb(255,0,0)`
+* hex2rgbRaw - outputs comma-separated RGB values mapped between 0-255, eg `255,0,0`
 
 ## Installation
 
